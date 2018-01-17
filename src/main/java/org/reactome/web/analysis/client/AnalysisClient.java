@@ -32,7 +32,7 @@ public abstract class AnalysisClient {
     }
 
     public static Request speciesComparison(Long dbId, int pageSize, int page, final AnalysisHandler.Result handler) {
-        String url = SERVER + ANALYSIS + "/species/homoSapiens/" + dbId + "?pageSize=" + pageSize + "&page=" + page;
+        String url = SERVER + ANALYSIS + "/species/oryzaSativa/" + dbId + "?pageSize=" + pageSize + "&page=" + page; // JP - PR config
         RequestBuilder requestBuilder = new RequestBuilder(RequestBuilder.GET, url);
         return analyse(requestBuilder, null, handler);
     }
